@@ -25,14 +25,14 @@ A complete tour booking application built with Node.js, Express, MongoDB, and mo
 
 ## 📁 Project Structure
 
-natours/
-├── controllers/
-├── dev-data/
-├── models/
-├── public/
-├── routes/
-├── utils/
-├── views/
-├── .env
-├── app.js
-├── server.js
+- natours/
+- ├── controllers/
+- ├── dev-data/
+- ├── models/
+- ├── public/
+- ├── routes/
+- ├── utils/
+- ├── views/
+- ├── .env
+- ├── app.js
+- ├── server.js
