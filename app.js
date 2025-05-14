@@ -9,6 +9,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -119,11 +120,12 @@ app.use('/api', limiter); // allow this limiter to any routes from the /api
 
 // serving static files
 app.use(express.static(path.join(__dirname, 'public'))); // serve static files from a folder not from a route
+app.use(compression());
 
 app.use((req, res, next) => {
   // create middleware should be put before the routes and runs at every request (dont forget next function to avoid stuckness)
   req.requstTime = new Date().toISOString();
-  console.log(req.cookies);
+  //console.log(req.cookies);
   next(); // go to the next middleware
 });
 

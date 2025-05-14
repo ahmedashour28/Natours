@@ -64,9 +64,6 @@ exports.getMe = (req, res, next) => {
 };
 
 exports.updateMe = catchAsync(async (req, res, next) => {
-  console.log(req.file);
-  console.log(req.body);
-
   // we gonna send error if the user uses this function to update his password this is only for the other data (we made a function for passwords )
   if (req.body.password || req.body.confirmPassword) {
     return next(

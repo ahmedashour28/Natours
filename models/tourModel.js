@@ -164,7 +164,7 @@ tourSchema.pre(/^find/, function (next) {
 });
 
 tourSchema.post('save', (doc, next) => {
-  console.log(doc);
+  //console.log(doc);
   next();
 });
 
@@ -176,11 +176,11 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (docs, next) {
+/*tourSchema.post(/^find/, function (docs, next) {
   console.log(`query took ${Date.now() - this.start} milliseconds`);
-  //console.log(docs);
+  console.log(docs);
   next();
-});
+});*/
 
 // AGGREGATION MIDDLEWARE
 /*

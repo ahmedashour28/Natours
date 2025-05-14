@@ -13,7 +13,7 @@ class APIfeatures {
     //1B- advanced filtering
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`); //here we gonna use regularexp to replace (lte) to ($lte) to use it while filtering the data
-    console.log(JSON.parse(queryStr));
+    //console.log(JSON.parse(queryStr));
     // another way for filtering getting the tours that has duration = 5 and difficulty = easy
     /*
       const query = Tour.find()

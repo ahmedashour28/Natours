@@ -184,7 +184,7 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   const resetToken = user.createPasswordResetToken();
   await user.save({ validateBeforeSave: false });
-  console.log(user);
+  //console.log(user);
 
   // we gonna send email to the user contains the reset token
 
@@ -226,7 +226,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     .createHash('sha256')
     .update(req.params.token)
     .digest('hex');
-  console.log(hashToken);
+  //console.log(hashToken);
   const user = await User.findOne({
     PasswordResetToken: hashToken,
     passwordResetExpires: { $gt: Date.now() },
