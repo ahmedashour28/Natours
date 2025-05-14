@@ -23,6 +23,9 @@ A complete tour booking application built with Node.js, Express, MongoDB, and mo
 - **Multer** & **Sharp** for image uploads
 - **Axios** for AJAX requests
 
+## Deployment 
+- https://bdf1bd99-7460-4fe5-a3a7-8b959928dc43-00-2db1va742xyzy.kirk.replit.dev/
+
 ## 📁 Project Structure
 
 - natours/
